@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Aspiration Day 2026 | MPK SMAN 24 Bandung</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --blue: #00A2FF;
+      --cyan: #4DEBFF;
+      --yellow: #F4E087;
+      --yellow-light: #FFF5B8;
+      --pink: #FF007F;
+      --pink-light: #FF5BAB;
+      --green: #228B22;
+      --green-light: #52B852;
+      --orange: #FF9F1C;
+      --dark: #17324D;
+      --white: #FFFFFF;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      color: var(--dark);
+      overflow-x: hidden;
+      background: var(--yellow);
+    }
+
+    h1, h2, h3 {
+      font-family: "Fredoka", sans-serif;
+    }
+
+    /* =========================
+       GLOBAL
+    ========================= */
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+      position: relative;
+      z-index: 5;
+    }
+
+    section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: white;
+
+      background:
+        radial-gradient(
+          circle at 50% 15%,
+          rgba(255,255,255,.45) 0%,
+          rgba(255,255,255,0) 22%
+        ),
+        linear-gradient(
+          180deg,
+          #007BFF 0%,
+          #00A2FF 25%,
+          #36D9FF 48%,
+          #8CEBFF 62%,
+          #F4E087 63%,
+          #FFD86B 100%
+        );
+    }
+
+    /* Sun */
+    .sun {
+      position: absolute;
+      width: 170px;
+      height: 170px;
+      right: 8%;
+      top: 9%;
+      border-radius: 50%;
+
+      background: radial-gradient(
+        circle,
+        #FFF8B0 0%,
+        #FFE45E 55%,
+        #FFB703 100%
+      );
+
+      box-shadow:
+        0 0 35px #FFE45E,
+        0 0 80px rgba(255,220,80,.6);
+
+      animation: sunPulse 4s ease-in-out infinite;
+    }
+
+    @keyframes sunPulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.08);
+      }
+    }
+
+    /* Clouds */
+
+    .cloud {
+      position: absolute;
+      width: 130px;
+      height: 45px;
+      border-radius: 50px;
+      background: rgba(255,255,255,.75);
+      filter: blur(.3px);
+      animation: cloudMove 18s linear infinite;
+    }
+
+    .cloud::before,
+    .cloud::after {
+      content: "";
+      position: absolute;
+      background: inherit;
+      border-radius: 50%;
+    }
+
+    .cloud::before {
+      width: 65px;
+      height: 65px;
+      left: 20px;
+      bottom: 10px;
+    }
+
+    .cloud::after {
+      width: 80px;
+      height: 80px;
+      right: 15px;
+      bottom: 8px;
+    }
+
+    .cloud-1 {
+      top: 20%;
+      left: -160px;
+    }
+
+    .cloud-2 {
+      top: 38%;
+      left: -300px;
+      transform: scale(.7);
+      animation-delay: 5s;
+    }
+
+    @keyframes cloudMove {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(130vw);
+      }
+    }
+
+    /* Palm trees */
+
+    .palm {
+      position: absolute;
+      bottom: 8%;
+      font-size: 8rem;
+      filter: drop-shadow(8px 10px 0 rgba(0,0,0,.08));
+      animation: palmSwing 4s ease-in-out infinite;
+    }
+
+    .palm-left {
+      left: 2%;
+    }
+
+    .palm-right {
+      right: 2%;
+      transform: scaleX(-1);
+    }
+
+    @keyframes palmSwing {
+      0%, 100% {
+        transform: rotate(-2deg);
+      }
+
+      50% {
+        transform: rotate(2deg);
+      }
+    }
+
+    .hero-content {
+      padding: 100px 0;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 100px;
+
+      background: rgba(255,255,255,.2);
+      border: 2px solid rgba(255,255,255,.6);
+      backdrop-filter: blur(10px);
+
+      font-weight: 600;
+      letter-spacing: .5px;
+
+      box-shadow: 0 10px 30px rgba(0,0,0,.1);
+
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .hero h1 {
+      margin-top: 25px;
+
+      font-size: clamp(
+        4rem,
+        13vw,
+        9rem
+      );
+
+      line-height: .85;
+      letter-spacing: -4px;
+
+      text-shadow:
+        0 6px 0 #228B22,
+        0 12px 25px rgba(0,0,0,.15);
+    }
+
+    .hero h1 .pink {
+      color: var(--pink);
+    }
+
+    .hero h1 .yellow {
+      color: var(--yellow-light);
+    }
+
+    .hero-description {
+      max-width: 650px;
+      margin: 30px auto 0;
+
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      line-height: 1.8;
+
+      text-shadow: 0 2px 8px rgba(0,0,0,.1);
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 35px;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 15px 28px;
+      border-radius: 100px;
+      font-weight: 700;
+      transition: .3s ease;
+    }
+
+    .btn-primary {
+      background: var(--pink);
+      color: white;
+      box-shadow: 0 7px 0 #B9005D;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-6px) rotate(-1deg);
+      box-shadow: 0 13px 0 #B9005D;
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,.2);
+      color: white;
+      border: 2px solid white;
+      backdrop-filter: blur(8px);
+    }
+
+    .btn-secondary:hover {
+      background: white;
+      color: var(--blue);
+      transform: translateY(-5px);
+    }
+
+    /* Wave */
+
+    .wave {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      line-height: 0;
+    }
+
+    .wave svg {
+      width: 100%;
+      height: 120px;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+      padding: 120px 0;
+      background:
+        radial-gradient(
+          circle at 10% 20%,
+          rgba(255,255,255,.5),
+          transparent 25%
+        ),
+        linear-gradient(
+          135deg,
+          #F4E087 0%,
+          #FFECA8 40%,
+          #F4E087 100%
+        );
+    }
+
+    .section-label {
+      color: var(--pink);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .about-title {
+      font-size: clamp(2.8rem, 7vw, 5rem);
+      color: var(--green);
+      line-height: 1;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-text p {
+      margin-top: 25px;
+      line-height: 1.9;
+      font-size: 1.05rem;
+    }
+
+    /* Floating cards */
+
+    .fun-cards {
+      display: grid;
+      gap: 18px;
+    }
+
+    .fun-card {
+      padding: 25px;
+      border-radius: 25px;
+      background: white;
+
+      box-shadow: 0 15px 35px rgba(0,0,0,.1);
+
+      display: flex;
+      align-items: center;
+      gap: 18px;
+
+      transition: .3s ease;
+    }
+
+    .fun-card:hover {
+      transform: translateX(8px) rotate(-1deg);
+    }
+
+    .fun-icon {
+      min-width: 60px;
+      height: 60px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 18px;
+      font-size: 1.8rem;
+
+      background: var(--blue);
+    }
+
+    .fun-card:nth-child(2) .fun-icon {
+      background: var(--pink);
+    }
+
+    .fun-card:nth-child(3) .fun-icon {
+      background: var(--green);
+    }
+
+    /* =========================
+       ASPIRATION FORM
+    ========================= */
+
+    .form-section {
+      padding: 120px 0;
+
+      background:
+        radial-gradient(
+          circle at 15% 15%,
+          rgba(255,255,255,.35),
+          transparent 22%
+        ),
+        radial-gradient(
+          circle at 85% 85%,
+          rgba(255,0,127,.35),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          #0066FF 0%,
+          #00A2FF 35%,
+          #00D9D9 70%,
+          #228B22 100%
+        );
+    }
+
+    .form-container {
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .form-card {
+      padding: clamp(30px, 7vw, 60px);
+
+      background: rgba(255,255,255,.94);
+      border-radius: 35px;
+
+      box-shadow:
+        0 30px 80px rgba(0,0,0,.2);
+
+      backdrop-filter: blur(15px);
+    }
+
+    .form-title {
+      text-align: center;
+      font-size: clamp(2.8rem, 7vw, 4.5rem);
+      color: var(--pink);
+      line-height: 1;
+    }
+
+    .form-subtitle {
+      text-align: center;
+      margin: 18px auto 35px;
+      max-width: 500px;
+      line-height: 1.7;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 15px 17px;
+
+      border: 2px solid #DDE5EA;
+      border-radius: 16px;
+
+      font: inherit;
+      outline: none;
+
+      transition: .25s ease;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--blue);
+      box-shadow:
+        0 0 0 5px rgba(0,162,255,.12);
+    }
+
+    textarea {
+      min-height: 160px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      width: 100%;
+      border: none;
+
+      padding: 17px;
+
+      border-radius: 100px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #FF007F,
+          #FF3FA4
+        );
+
+      color: white;
+
+      font: 700 1rem "Poppins", sans-serif;
+
+      cursor: pointer;
+
+      box-shadow: 0 8px 0 #B9005D;
+
+      transition: .3s ease;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-5px) scale(1.015);
+
+      box-shadow:
+        0 14px 0 #B9005D,
+        0 20px 40px rgba(255,0,127,.25);
+    }
+
+    .submit-btn:active {
+      transform: translateY(3px);
+      box-shadow: 0 4px 0 #B9005D;
+    }
+
+    #message {
+      display: none;
+
+      margin-top: 20px;
+      padding: 15px;
+
+      background: #E8F8E8;
+      color: var(--green);
+
+      border-radius: 15px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    /* =========================
+       EXTRA DECORATIONS
+    ========================= */
+
+    .sticker {
+      position: absolute;
+      font-size: 3rem;
+      animation: float 4s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    .sticker-1 {
+      left: 8%;
+      top: 20%;
+    }
+
+    .sticker-2 {
+      right: 10%;
+      bottom: 15%;
+      animation-delay: 1s;
+    }
+
+    .sticker-3 {
+      left: 5%;
+      bottom: 10%;
+      animation-delay: 2s;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-12px);
+      }
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      position: relative;
+      padding: 60px 20px;
+
+      color: white;
+      text-align: center;
+
+      background:
+        linear-gradient(
+          135deg,
+          #146B14,
+          #228B22,
+          #2EA82E
+        );
+    }
+
+    footer h3 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      opacity: .9;
+      margin-bottom: 18px;
+    }
+
+    .instagram {
+      display: inline-block;
+
+      padding: 13px 25px;
+
+      border-radius: 100px;
+
+      color: white;
+      text-decoration: none;
+
+      border: 2px solid rgba(255,255,255,.7);
+
+      transition: .3s ease;
+    }
+
+    .instagram:hover {
+      background: white;
+      color: var(--green);
+      transform: translateY(-5px);
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 768px) {
+
+      .sun {
+        width: 110px;
+        height: 110px;
+        right: 5%;
+        top: 7%;
+      }
+
+      .palm {
+        font-size: 5rem;
+        bottom: 5%;
+      }
+
+      .palm-left {
+        left: -10px;
+      }
+
+      .palm-right {
+        right: -10px;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .fun-card {
+        padding: 20px;
+      }
+
+      .wave svg {
+        height: 70px;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .hero-content {
+        padding-top: 120px;
+      }
+
+      .badge {
+        font-size: .8rem;
+      }
+
+      .hero-description {
+        font-size: .9rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .palm {
+        opacity: .6;
+      }
+
+      .sticker {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <section class="hero" id="home">
+
+    <div class="sun"></div>
+
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+
+    <div class="palm palm-left">🌴</div>
+    <div class="palm palm-right">🌴</div>
+
+    <div class="sticker sticker-1">☀️</div>
+    <div class="sticker sticker-2">🌺</div>
+    <div class="sticker sticker-3">🐚</div>
+
+    <div class="container hero-content">
+
+      <div class="badge">
+        🌴 MPK SMAN 24 BANDUNG • 2026
+      </div>
+
+      <h1>
+        Aspiration<br>
+        <span class="pink">Day</span>
+        <span class="yellow">2026</span>
+      </h1>
+
+      <p class="hero-description">
+        Satu suara, sejuta inspirasi.
+        Yuk, sampaikan ide, harapan, kritik,
+        dan aspirasimu untuk SMAN 24 Bandung!
+        🌊☀️
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#aspirasi" class="btn btn-primary">
+          ✨ Kirim Aspirasi
+        </a>
+
+        <a href="#about" class="btn btn-secondary">
+          Kenalan Dulu ↓
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- Ocean wave -->
+    <div class="wave">
+      <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
+        <path
+          fill="#F4E087"
+          d="
+          M0,80
+          C180,140 300,20 480,80
+          C660,140 780,20 960,80
+          C1140,140 1260,20 1440,80
+          L1440,160
+          L0,160 Z
+          "
+        />
+      </svg>
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       ABOUT
+  ========================== -->
+
+  <section class="about" id="about">
+
+    <div class="container">
+
+      <div class="about-grid">
+
+        <div class="about-text">
+
+          <div class="section-label">
+            🏖️ ABOUT THE EVENT
+          </div>
+
+          <h2 class="about-title">
+            Suaramu<br>
+            Berarti!
+          </h2>
+
+          <p>
+            <strong>Aspiration Day 2026</strong> merupakan
+            wadah bagi siswa-siswi SMAN 24 Bandung untuk
+            menyampaikan aspirasi secara bebas, kreatif,
+            dan konstruktif.
+          </p>
+
+          <p>
+            Karena setiap ide punya potensi untuk membawa
+            perubahan. Jadi, jangan ragu untuk speak up!
+            🌺
+          </p>
+
+        </div>
+
+
+        <div class="fun-cards">
+
+          <div class="fun-card">
+
+            <div class="fun-icon">
+              💡
+            </div>
+
+            <div>
+              <h3>Share Ideas</h3>
+              <p>
+                Punya ide baru? Ceritakan!
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="fun-card">
+
+            <div class="fun-icon">
+              💬
+            </div>
+
+            <div>
+              <h3>Speak Up</h3>
+              <p>
+                Sampaikan pendapatmu.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="fun-card">
+
+            <div class="fun-icon">
+              🌱
+            </div>
+
+            <div>
+              <h3>Make Change</h3>
+              <p>
+                Bersama menciptakan perubahan.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FORM ASPIRATION
+  ========================== -->
+
+  <section class="form-section" id="aspirasi">
+
+    <div class="container">
+
+      <div class="form-container">
+
+        <div class="form-card">
+
+          <h2 class="form-title">
+            Drop Your<br>
+            Aspiration 🌺
+          </h2>
+
+          <p class="form-subtitle">
+            Tulis apa yang ingin kamu sampaikan.
+            Setiap suara adalah bagian dari perjalanan
+            menuju sekolah yang lebih baik.
+          </p>
+
+
+          <form id="aspirationForm">
+
+            <div class="form-group">
+
+              <label for="nama">
+                👤 Nama
+              </label>
+
+              <input
+                type="text"
+                id="nama"
+                placeholder="Nama kamu..."
+                required
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="kelas">
+                🎒 Kelas
+              </label>
+
+              <input
+                type="text"
+                id="kelas"
+                placeholder="Contoh: XI IPA 2"
+                required
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="aspirasi">
+                💭 Aspirasi
+              </label>
+
+              <textarea
+                id="aspirasi"
+                placeholder="Ceritakan ide, kritik, saran, atau harapanmu..."
+                required
+              ></textarea>
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="submit-btn"
+            >
+              Kirim Aspirasi ✨
+            </button>
+
+
+            <div id="message">
+              🎉 Terima kasih!
+              Aspirasi kamu berhasil dicatat.
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <h3>See You at Aspiration Day! 🌴</h3>
+
+    <p>
+      © 2026 MPK SMAN 24 Bandung
+    </p>
+
+    <a
+      class="instagram"
+      href="https://www.instagram.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      📸 Follow Instagram MPK
+    </a>
+
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script>
+
+    const form =
+      document.getElementById("aspirationForm");
+
+    const message =
+      document.getElementById("message");
+
+
+    form.addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      message.style.display = "block";
+
+      form.reset();
+
+      setTimeout(() => {
+
+        message.style.display = "none";
+
+      }, 5000);
+
+    });
+
+
+    /*
+      Smooth reveal animation
+    */
+
+    const observer =
+      new IntersectionObserver(
+        (entries) => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.style.opacity = "1";
+              entry.target.style.transform =
+                "translateY(0)";
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.15
+        }
+      );
+
+
+    document
+      .querySelectorAll(".about-text, .fun-card, .form-card")
+      .forEach(element => {
+
+        element.style.opacity = "0";
+        element.style.transform =
+          "translateY(30px)";
+        element.style.transition =
+          "opacity .7s ease, transform .7s ease";
+
+        observer.observe(element);
+
+      });
+
+  </script>
+
+</body>
+</html>
